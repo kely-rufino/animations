@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: blinkBox 4s infinite;
+    transition: ease 0.55s;
+}
+.box:hover {
+    animation-play-state: paused;
+}
+
+.circle{
+    border-radius: 100%;
+}
+
+@keyframes blinkBox{
+    0%   {top: 0; left: 0; background: indianred;}
+    25%  {top: 0; left: 100px; background: indigo;}
+    50%  {top: 100px; left: 100px; background: darkslategray;}
+    75%  {top: 100px; left: 0; background: aliceblue;}
+    100% {top: 0; left: 0; background: darkolivegreen;}
+}
+
+.button{
+    width: 50px;
+    height: 30px;
+    margin: 30px;
+    background-color: aliceblue;
+    font-size: 15px;
+}
+.button:hover {
+    background-color: #d000ff;
+    transition: background-color 1s;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: #007580;
+    position: absolute;
+    transition: height 1s;
+    left: 50%;
+    top: 100px;
+    cursor: pointer;
+}
+
+.box2Active {
+    height: 200px;
+}
